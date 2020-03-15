@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
-    <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute('echo=0'); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
     <div class="media-posted-on">
     <?php
       if ( is_sticky() && ! is_single() ) {
@@ -22,44 +22,34 @@
       edit_post_link('Edit', '<span class="sep"> | </span><span class="media-edit-link">', '</span>' );
     ?>
     </div>
-  </header>
+  </header><!-- .entry-header -->
 
-<?php if ( is_search() ) { ?>
-  <?php // Only display Excerpts for Search ?>
-  <div class="entry-summary">
-    <?php the_excerpt(); ?>
-  </div>
-<?php } else { ?>
   <div class="entry-content">
-    <?php the_content('Read more'); ?>
-    <?php wp_link_pages( array( 'before' => '<div class="page-links"> Pages:', 'after' => '</div>' ) ); ?>
-  </div>
-<?php } ?>
+    <?php the_content(); ?>
+    <?php wp_link_pages( array( 'before' => '<div class="page-links">' .'Pages:', 'after' => '</div>' ) ); ?>
+  </div><!-- .entry-content -->
 
   <footer class="entry-meta">
     <?php
-    if ( 'post' == get_post_type() ) {
-      // Hide category and tag text for pages on Search
       /* translators: used between list items, there is a space after the comma */
-      $categories_list = get_the_category_list(', ');
-      if ( $categories_list ) {
-    ?>
-      <span class="cat-links">
-        <?php printf('Posted in %1$s', $categories_list ); ?>
-      </span>
-    <?php } ?>
-    <?php
-      $tags_list = get_the_tag_list( '', ', ' );
-      if ( $tags_list ) {
-    ?>
-      <span class="tag-links">
-        <?php printf('Tagged %1$s', $tags_list ); ?>
-      </span>
-    <?php } ?>
-  <?php } ?>
+      $category_list = get_the_category_list(', ');
 
-  <?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) { ?>
-    <span class="comments-link"><?php comments_popup_link('Leave a comment', '1 Comment', '% Comments'); ?></span>
-  <?php } ?>
+      /* translators: used between list items, there is a space after the comma */
+      $tag_list = get_the_tag_list( '', ', ' );
+
+      // But this blog has loads of categories so we should probably display them here
+      if ( '' != $tag_list ) {
+        $meta_text = '<span class="cat-links">Categories: %1$s</span>';
+        $meta_text .= '<span class="tag-links">Tags: %2$s</span>';
+      } else {
+        $meta_text = '<span class="cat-links">Categories: %1$s</span>';
+      }
+
+      printf(
+        $meta_text,
+        $category_list,
+        $tag_list
+      );
+    ?>
   </footer>
 </article>
