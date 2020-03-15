@@ -1,11 +1,10 @@
 <?php
 
-function lunar_enqueue_styles() {
+add_action('wp_enqueue_scripts', function(){
   wp_enqueue_style('lunar_style', get_template_directory_uri() . '/style.css', false, filemtime(get_theme_file_path('style.css')), 'all');
-}
-add_action( 'wp_enqueue_scripts', 'lunar_enqueue_styles' );
+});
 
-function scrappy_widgets_init() {
+add_action('widgets_init', function(){
   register_sidebar( array(
     'id' => 'right-sidebar',
     'name' => 'Right Sidebar',
@@ -15,5 +14,12 @@ function scrappy_widgets_init() {
     'after_title' => '</h2>'
     )
   );
-}
-add_action( 'widgets_init', 'scrappy_widgets_init' );
+});
+
+// disable embedded jquery
+add_filter('init',function(){
+  if (!is_admin()) {
+    wp_deregister_script('jquery');
+    wp_deregister_script('wp-embed');
+  }
+});
