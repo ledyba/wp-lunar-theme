@@ -25,8 +25,8 @@
     wp_head();
   ?>
 </head>
-
 <body <?php body_class(); ?>>
+<div id="lunar-icon"></div>
 <div id="page">
   <?php do_action( 'before' ); ?>
   <header id="masthead" class="site-header" role="banner">

@@ -7,3 +7,18 @@ body {
   background-attachment: fixed;
 　background-position: left top;
 }
+
+#lunar-icon {
+  position: fixed;
+  z-index: -1;
+  background-image: url("img/lunar.svg");
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-clip: content-box;
+  background-size: cover;
+　background-position: left top;
+}
