@@ -3,12 +3,10 @@
 <div id="primary" class="site-content">
   <div id="content" role="main">
 <?php
-  if ( have_posts() ) {
-    while ( have_posts() ) {
-       the_post();
-       get_template_part( 'content', get_post_format() );
-     }
-   }
+while ( have_posts() ) {
+   the_post();
+   get_template_part( 'article', get_post_format() );
+ }
 ?>
   </div>
 </div>
