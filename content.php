@@ -22,7 +22,7 @@
       edit_post_link('Edit', '<span class="sep"> | </span><span class="media-edit-link">', '</span>' );
     ?>
     </div>
-  </header><!-- .entry-header -->
+  </header>
 
   <div class="entry-content">
     <?php the_content(); ?>
