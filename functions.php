@@ -1,5 +1,9 @@
 <?php
 
+add_action( 'after_setup_theme', function(){
+  register_nav_menu('menu', 'Header Navigation Menu');
+});
+
 add_action('wp_enqueue_scripts', function(){
   wp_enqueue_style('lunar_style', get_template_directory_uri() . '/style.css', false, filemtime(get_theme_file_path('style.css')), 'all');
 });
