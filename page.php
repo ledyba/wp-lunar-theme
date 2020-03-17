@@ -5,11 +5,10 @@
 <?php
 while ( have_posts() ) {
    the_post();
-   get_template_part( 'article', get_post_format() );
+   get_template_part( 'article', 'page' );
  }
 ?>
   </div>
-  <?php the_pagination(); ?>
 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
