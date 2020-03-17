@@ -198,13 +198,17 @@ blockquote cite {
   padding: 1em;
 }
 
-article {
+#respond #comment {
+  width: 100%;
+}
+
+#respond, .akismet_comment_form_privacy_notice {
   background: #edf3f7;
   border-radius: 1em;
   padding: 1em;
 }
 
-#respond, .akismet_comment_form_privacy_notice {
+article {
   background: #edf3f7;
   border-radius: 1em;
   padding: 1em;
