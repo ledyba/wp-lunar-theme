@@ -159,6 +159,45 @@ blockquote cite {
   padding: 1em;
 }
 
+#content > #comments {
+  background: #edf3f7;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.commentlist .reply::before {
+  content: "[ ";
+}
+
+.commentlist .reply::after {
+  content: " ]";
+}
+
+#content ol.commentlist {
+  list-style: none;
+}
+
+#content ol.commentlist li {
+  background: #f5f1b8;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+#content ol.commentlist li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+#content ol.commentlist li ul{
+  list-style: none;
+}
+
+#content ol.commentlist li ul li {
+  margin-top: 0.5em;
+  background: #edf3f7;
+  border-radius: 1em;
+  padding: 1em;
+}
+
 article {
   background: #edf3f7;
   border-radius: 1em;
