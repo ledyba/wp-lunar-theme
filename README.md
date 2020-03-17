@@ -1,6 +1,6 @@
 # Lunar Theme
 
-a theme of https://7io.org/
+A WordPress theme of https://7io.org/
 
 ## Screenshot
 
