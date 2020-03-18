@@ -144,6 +144,10 @@ blockquote cite {
     max-width: 100%;
   }
 
+  article {
+    overflow-x: scroll;
+  }
+
 }
 
 #content > header {
@@ -223,6 +227,16 @@ article img {
   max-height:100%;
   width: auto;
   height: auto;
+}
+
+article table, article th, article td {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+article th {
+  font-weight: bold;
+  background: #f5f1b8;
 }
 
 nav.pagination {

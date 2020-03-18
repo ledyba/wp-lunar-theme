@@ -59,7 +59,7 @@
     rewind_posts();
     while ( have_posts() ) {
       the_post();
-      get_template_part('content');
+      get_template_part( 'article', get_post_format() );
     }
     ?>
   <?php } else { ?>
