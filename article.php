@@ -59,6 +59,7 @@
   <?php } ?>
 
   <?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) { ?>
+    <br>
     <span class="comments-link"><?php comments_popup_link('Leave a comment', '1 Comment', '% Comments'); ?></span>
   <?php } ?>
   </footer>
