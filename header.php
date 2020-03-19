@@ -21,6 +21,7 @@
       echo sprintf("%s", max($paged, $page));
     }
   ?></title>
+  <link href="/feed/" rel="feed" type="application/rss+xml" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
   <?php
     wp_head();
   ?>
