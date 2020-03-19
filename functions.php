@@ -26,6 +26,7 @@ add_filter('init',function(){
     wp_deregister_script('jquery');
     wp_deregister_script('wp-embed');
   }
+  add_theme_support( 'automatic-feed-links' );
 });
 
 function the_pagination() {
