@@ -31,8 +31,8 @@ header#masthead {
   width: 60em;
   max-width: 100%;
   margin: 0px auto;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding: 0px;
+  margin-bottom: 0.5rem;
 }
 
 header#masthead > h1 {
@@ -42,8 +42,9 @@ header#masthead > h1 {
   text-align: center;
   font-size: 3rem;
   background-color: #edf3f7;
-  padding: 1rem;
-  border-radius: 1em;
+  padding: 0.0rem 0.3rem 0.3rem 0.3rem;
+  border-radius: 0.5em;
+  margin: 0.5rem auto;
 }
 
 header#masthead > h1 > a {
@@ -65,7 +66,7 @@ blockquote {
   font-style: italic;
   background: #f5f1b8;
   margin: 1em;
-  border-radius: 0.7em;
+  border-radius: 0.3em;
 }
 
 blockquote:before, blockquote:after,
@@ -130,7 +131,12 @@ blockquote cite {
     max-width: 100%;
     margin: 0px auto;
   }
-  
+
+  header#masthead > blockquote {
+    width: 60em;
+    max-width: 100%;
+  }
+
   #primary {
     width: 60em;
     max-width: 100%;
@@ -157,19 +163,19 @@ blockquote cite {
   box-sizing: border-box;
   width: 100%;
   margin: 0px auto;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #content > header > h1 {
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 #content > #comments {
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 .commentlist .reply::before {
@@ -186,12 +192,12 @@ blockquote cite {
 
 #content ol.commentlist li {
   background: #f5f1b8;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 #content ol.commentlist li:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #content ol.commentlist li ul{
@@ -201,8 +207,8 @@ blockquote cite {
 #content ol.commentlist li ul li {
   margin-top: 0.5em;
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 #respond #comment {
@@ -211,18 +217,18 @@ blockquote cite {
 
 #respond, .akismet_comment_form_privacy_notice {
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 article {
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 article:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 article img {
@@ -245,15 +251,15 @@ article th {
 nav.pagination {
   margin-top: 1em;
   background: #edf3f7;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 nav.pagination > ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin: 0 0 0 1em;
+  margin: 0 0 0 0.5em;
   padding: 0;
 }
 
@@ -279,12 +285,12 @@ nav.pagination > ul > li > a {
 #secondary aside {
   background: #f5f1b8;
 
-  border-radius: 0.5em;
-  padding: 0.5em;
+  border-radius: 0.3em;
+  padding: 0.3em;
 }
 
 #secondary aside:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #searchform {
@@ -298,4 +304,8 @@ nav.pagination > ul > li > a {
   margin: 0px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.site-info {
+  text-align: center;
 }
