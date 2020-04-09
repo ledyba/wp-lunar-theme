@@ -316,6 +316,6 @@ nav.pagination > ul > li > a {
 .footnote-identifier-link::after {
   content: "]";
 }
-.footnote-identifier-link .footnote-link {
+.footnote-identifier-link {
   vertical-align: super;
 }
