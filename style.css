@@ -309,3 +309,13 @@ nav.pagination > ul > li > a {
 .site-info {
   text-align: center;
 }
+
+.footnote-identifier-link::before {
+  content: "[";
+}
+.footnote-identifier-link::after {
+  content: "]";
+}
+.footnote-identifier-link .footnote-link {
+  vertical-align: super;
+}
