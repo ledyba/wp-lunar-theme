@@ -31,7 +31,7 @@
   <?php do_action( 'before' ); ?>
   <header id="masthead" class="site-header" role="banner">
     <h1 class="site-title"><a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-    <blockquote style="font-style: normal;"><?php include('/opt/www/7io.org/app/kotoba.php/kotoba.php'); ?></blockquote>
+    <blockquote style="font-style: normal;"><?php include('/www/app/kotoba.php/kotoba.php'); ?></blockquote>
   </header>
 
   <div id="main">

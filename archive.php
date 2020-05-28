@@ -33,9 +33,9 @@
 
           } elseif ( is_year() ) {
             printf('Yearly Archives: %s', '<span>' . get_the_date( 'Y' ) . '</span>' );
-
           } else {
             echo ('Archives');
+            echo ('<!-- '. get_post_type() .' -->');
           }
         ?>
       </h1>
