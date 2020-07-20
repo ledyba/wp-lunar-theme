@@ -1,6 +1,19 @@
 <?php
 
-add_action( 'after_setup_theme', function(){
+add_action('pre_get_posts', function($query) {
+  if($query->is_day || $query->is_time) {
+    $query->is_date = false;
+    $query->is_day = false;
+    $query->is_time = false;
+    $query->is_archive = false;
+    $query->is_post_type_archive = false;
+    $query->is_posts_page = false;
+    $query->is_singular = true;
+    $query->is_single = true;
+  }
+});
+
+add_action('after_setup_theme', function(){
   register_nav_menu('menu', 'Header Navigation Menu');
 });
 
