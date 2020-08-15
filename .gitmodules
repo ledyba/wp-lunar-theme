@@ -1,0 +1,3 @@
+[submodule "kotoba.php"]
+	path = kotoba.php
+	url = git@github.com:ledyba/kotoba.php.git
