@@ -319,3 +319,9 @@ nav.pagination > ul > li > a {
 .footnote-identifier-link {
   vertical-align: super;
 }
+
+figcaption {
+  font-size: smaller;
+  color: #727c82;
+  text-align: center;
+}
