@@ -26,7 +26,7 @@ body::before {
 }
 
 
-header#masthead {
+header#master-head {
   box-sizing: border-box;
   width: 60em;
   max-width: 100%;
@@ -35,7 +35,7 @@ header#masthead {
   margin-bottom: 0.5rem;
 }
 
-header#masthead > h1 {
+header#master-head > h1 {
   box-sizing: border-box;
   width: 100%;
   font-weight: bolder;
@@ -47,12 +47,12 @@ header#masthead > h1 {
   margin: 0.5rem auto;
 }
 
-header#masthead > h1 > a {
+header#master-head > h1 > a {
   color: #727c82;
   text-decoration: none;
 }
 
-header#masthead > blockquote {
+header#master-head > blockquote {
   width: 80%;
   margin: 0px auto;
   padding: 0.5em 1em 0.5em 3.2em;
@@ -132,7 +132,7 @@ blockquote cite {
     margin: 0px auto;
   }
 
-  header#masthead > blockquote {
+  header#master-head > blockquote {
     width: 60em;
     max-width: 100%;
   }
