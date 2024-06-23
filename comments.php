@@ -1,6 +1,8 @@
 <hr />
 <div id="comments" class="comments-area">
-<?php if(post_password_required()) { ?>
+<?php
+  if(post_password_required()) {
+?>
   <p class="nopassword">This post is password protected. Enter the password to view any comments.</p>
 </div>
 <?php
@@ -15,13 +17,13 @@
     ?>
   </h2>
 
-  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+  <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // are there comments to navigate through ?>
   <nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
     <h1 class="assistive-text">Comment navigation</h1>
     <div class="nav-previous"><?php previous_comments_link('Older Comments'); ?>/div>
     <div class="nav-next"><?php next_comments_link('Newer Comments &raquo;'); ?></div>
   </nav>
-<?php } ?>
+  <?php } ?>
 
   <ol class="commentlist">
     <?php wp_list_comments(); ?>
@@ -42,6 +44,10 @@
   if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) {
 ?>
   <p class="nocomments">Comments are closed.</p>
-<?php } ?>
+<?php
+  }
+?>
 
 <?php comment_form(); ?>
+
+</div>
